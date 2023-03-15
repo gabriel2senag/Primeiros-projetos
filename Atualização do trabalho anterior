@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner de vendas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Mexa no style a seguir -->    
+    <style>
+        .borda-gratis{
+            border: 2px solid #000 ;
+        }
+        .borda-basico{
+            border: 2px solid #208F51;
+        }
+        .borda-empresarial{
+            border: 2px solid #FA9201;
+        }
+        .borda-ilimitado{
+            border: 2px solid #F82600;
+        }
+        .borda-gratis, .borda-basico, .borda-empresarial, .borda-ilimitado {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ponto {
+             position: absolute;
+            top: -6px;
+            left: -6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #000;
+            transform: translateX(0);
+            transition: transform 2s;
+        }
+
+.borda-gratis:hover .ponto, .borda-basico:hover .ponto, .borda-empresarial:hover .ponto, .borda-ilimitado:hover .ponto {
+   transform: rotate(360deg) translateX(calc(100% - 6px));
+   transition: transform 2s;
+}
+
+
+
+        
+
+
+        
+        i {
+            font-size: 2.5em;;
+        }
+        body{
+            background: linear-gradient(to bottom, #253238, #C9CCCE, #F1FEE0);
+            
+        }
+        small{
+            font-size: 1pc;
+            text-align:right;
+            margin-left: 12.4px;
+            
+            
+        }
+        p{
+            color: black;
+        }
+        div{
+            transform: scale(1);
+            transition: transform 0.2s;
+        }
+        div:hover{
+            transform: scale(1.1);
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+        ul {
+  opacity: 0;
+  animation: aparecer 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ul:hover {
+  opacity: 1;
+}
+
+        
+
+
+
+       
+        #gratis {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #gratis1{
+            background-color: white;
+            text-align: left;
+            color: black;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2.0;
+            
+        }
+        #basico{
+            background-color:#208F51;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+            
+            
+
+
+        }
+        #empresarial{
+            background-color:#FA9201 ;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #textoempresarial{
+            color:#FA9201;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2.0;
+        }
+        #ilimitado{
+            background-color: #F82600;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #textoilimitado{
+            color:#F82600 ;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2.0;
+        }
+        #flor{
+            
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #textobasico{
+            color:#208F51 ;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2.0;
+        }
+        #titulo{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        #subtitulo{
+            font-size: large;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #final{
+            text-align: center;
+            font-weight: bold;
+        }
+        #valor{
+            color:#208F51 ;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #valor2{
+            color:#FA9201 ;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #valor3{
+            color:#F82600;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        .bi bi-flower1{
+            background-color: white;
+            color: black;
+            font-size: 3em;
+        }
+
+    
+    </style>
+</head>
+<body>
+    
+    <img src="https://storage.googleapis.com/mixo-files/logos/hostPay-1678895539073.svg" alt="Ícone de Hospedagem Web" style="width: 8%;" class="neon-point">
+
+     <h1 id="titulo">A Solução Completa para Hospedagem Web</h1>
+
+    <p id="subtitulo">Escolha entre nossos planos personalizáveis para atender às suas necessidades de hospedagem</p>
+<br>
+<br>
+<br>
+<br>
+
+    <div style="display: flex; flex-direction: row; ;align-items: center;
+    justify-content: space-around;">
+
+        <div class="borda-gratis">
+            <div class="ponto"></div>
+            <div id="gratis">Gr&aacute;tis</div>
+
+        
+            <p id="flor">
+                <i class="bi bi-flower1"></i>
+                <span>R$ 0</span> <br>
+                <small style="font-size: 1pc;">Por m&ecirc;s</small>
+            </p id="gratis1">
+
+            <ul style="list-style: none; line-height: 2.0; font-family: Arial, Helvetica, sans-serif;">
+                <li>1 Domínio</li>
+                <li>1 Conta de email</li>
+                <li>250 MB de espaço em disco</li>                   
+                <li>5 GB de tráfego</li>    
+                <li>1 Site HTML</li>
+                
+            </ul>
+            <p style="text-align: center; background-color: black; padding: 10px; color: white; font-weight: 100;font-size: xx-large; margin: 0;">Compre agora!</p>
+        
+        </div>
+
+        <div class="borda-basico">
+            <div class="ponto"></div>
+            <div id="basico">B&aacute;sico</div>
+            <p id="valor">
+                <i class="bi bi-house"></i>
+                <span>R$ 5</span> <br>
+                <small>Por m&ecirc;s</small>
+            </p id="casa">
+
+            <ul id="textobasico" style="list-style: none;">
+                <li>5 Domínio</li>
+                <li>5 Conta de email</li>
+                <li>1 GB de espaço em disco</li>                   
+                <li>25 GB de tráfego</li>    
+                <li>5 Sites HTML</li>
+            </ul>
+            <p style="text-align: center; background-color:#208F51; color: white; font-size: xx-large; padding: 10px; margin: 0;">Compre agora!</p>
+        </div>
+
+        <div class="borda-empresarial">
+            <div class="ponto"></div>
+            <div id="empresarial">Empresarial</div>
+            <p id="valor2">
+                <i class="bi bi-briefcase"></i>
+                <span>R$ 10</span> <br>
+                <small>Por m&ecirc;s</small>
+            </p >
+
+            <ul id="textoempresarial" style="list-style: none;">
+                <li>10 Domínio</li>
+                <li>10 Conta de email</li>
+                <li>10 GB de espaço em disco</li>                   
+                <li>500 GB de tráfego</li>    
+                <li>10 Sites HTML</li>
+            </ul>
+            <p style="text-align: center; background-color: #FA9201; color: white;font-size: xx-large; padding: 10px;margin: 0;">Compre agora!</p>
+        </div>
+
+        <div class="borda-ilimitado">
+            <div class="ponto"></div>
+            <div id="ilimitado">Ilimitado</div>
+            <p id="valor3">
+                <i class="bi bi-infinity"></i>
+                <span>R$ 19</span> <br>
+                <small>Por m&ecirc;s</small>
+            </p>
+
+            <ul id="textoilimitado" style="list-style: none;">
+                <li>1 Domínios ilimitados</li>
+                <li>Contas ilimitadas</li>
+                <li>Espaço em disco ilimitado</li>                   
+                <li>Tráfego ilimitado</li>    
+                <li>&infin; Sites HTML</li>
+            </ul>
+            <p style="text-align: center; background-color: #F82600; color: white;font-size: xx-large; padding: 10px;margin: 0;">Compre agora!</p>
+        </div>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <p id="final">Oferta especial para usuários novatos e garantia de dinheiro de volta em 30 dias caso haja cancelamento.</p> 
+        
+    
+</body>
+</html>
